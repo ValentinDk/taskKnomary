@@ -16,7 +16,7 @@ class Message extends CI_Controller {
     {
         $user = $this->users_model->getUser($id);
 
-        if ($user->auth == true) {
+        if ($user != null && $user->auth == true) {
             $this->load->helper('form');
             $this->load->library('email');
             $this->load->library('form_validation');

@@ -10,9 +10,9 @@ class Users_model extends CI_Model
 
     /**
      * @param int $id
-     * @return object
+     * @return object | null
      */
-    public function getUser(int $id): object
+    public function getUser(int $id)
     {
         $query = $this->db->get_where('user', ['id' => $id]);
         $data = $query->row();
